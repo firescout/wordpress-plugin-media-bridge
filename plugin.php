@@ -2,7 +2,7 @@
 /**
  * @wordpress-plugin
  * Plugin Name:       Media bridge
- * Description:       Downloads media form URL and saves it into WP media.
+ * Description:       Creates REST endpoit that will downloads media form URL and saves it into WP media.
  * Version:           1.0
  * Author:            Orel Krispel
  */
