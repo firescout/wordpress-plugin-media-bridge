@@ -46,7 +46,7 @@ class Media_Bridge_API extends WP_REST_Controller
 
         $upload = $this->mb_upload_from_url($payload['url'], $payload['filename']);
         if ($upload == true) {
-            return new WP_REST_Response("File uploaded", 200);
+            return new WP_REST_Response(array("status" => "success", "message" => "File uploaded"), 200);
         }
 
         return new WP_Error('upload', __($upload, 'text-domain'), array('status' => 500));
@@ -138,7 +138,7 @@ class Media_Bridge_API extends WP_REST_Controller
         }
 
         // Success, return attachment ID (int)
-        return array("status" => "success", "message" => "File uploaded");
+        return true;
     }
 }
 
